@@ -1,0 +1,147 @@
+/* Site Setup */
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&family=Playfair+Display:wght@400;800&display=swap');
+
+:root {
+    --bckgrd: #ececec;
+    --black: #323232;
+    --white: #f5f5f5;
+    --titleFont: 'Playfair Display', serif;
+    --textFont: 'Mukta', sans-serif;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: var(--bckgrd);
+}
+.sitebody {
+    width:90%;
+    margin: 50px auto;
+}
+
+/* Top Section */
+header {
+    display: flex;
+    width:100%;
+    gap:5%;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.titlebox {
+    width:50%;
+    align-self: flex-end;
+}
+.center {
+    width:100%;
+    align-self: center;
+}
+.title {
+    font-family: var(--titleFont);
+    font-size: 5rem;
+}
+.textbox {
+    width:50%;
+}
+.hide {
+    display: none;
+}
+.text {
+    font-family: var(--textFont);
+    font-weight: 300;
+    text-align: justify;
+}
+@media screen and (max-width:768px) {
+    .title {
+        font-size: 3rem;
+    }
+    .text {
+        font-size: 0.8rem;
+    }
+}
+@media screen and (max-width:500px) {
+    header {
+        flex-direction: column;
+        gap:25px;
+        padding:25px;
+    }
+    #titlebox {
+        align-self: flex-start;
+    }
+    #textbox {
+        width:75%;
+        align-self: flex-end;
+    }
+}
+
+/* Middle (window) Section */
+.window {
+    border:2px solid green;
+    margin-bottom: 50px;
+    min-height: 500px;
+}
+
+/* Home */
+#home {
+    width:100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#home img {
+    width:100%;
+}
+@media screen and (max-width:628px) {
+    #home {
+        align-items: flex-start;
+    }
+}
+
+/* Business */
+
+
+/* Travel */
+.travel {
+    border:5px solid yellow;
+    width:100%;
+    display:flex;
+}
+.travellist {
+    border:1px solid red;
+    width:20%;
+}
+.travelwindow {
+    border:1px solid black;
+    width:80%;
+}
+
+
+/* Bottom (navbar) Section */
+footer {
+    margin-top: 25px;
+}
+#navbar {
+    display: flex;
+    justify-content: center;
+    gap:10%;
+}
+.navitem {
+    list-style: none;
+    font-family: var(--titleFont);
+    font-weight: 400;
+}
+.navitem:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+.slash {
+    list-style: none;
+}
+.link {
+    text-decoration: none;
+    color:var(--black);
+}
